@@ -18,7 +18,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { LoginStatusComponent } from './components/login-status/login-status.component';
-import { CustomOktaCallbackComponent } from './custom-okta-callback-component/custom-okta-callback-component.component';
+
 
 import {
   OktaAuthGuard,
@@ -55,7 +55,7 @@ const routes: Routes = [
   {path: 'members', component: MembersPageComponent, canActivate: [OktaAuthGuard],
                     data: {onAuthRequired: sendToLoginPage} },
 
-  {path: 'login/callback', component: CustomOktaCallbackComponent},
+  {path: 'login/callback', component: OktaCallbackComponent},
   {path: 'login', component: LoginComponent},
   
   {path: 'checkout', component: CheckoutComponent},
@@ -82,8 +82,7 @@ const routes: Routes = [
     LoginComponent,
     LoginStatusComponent,
     MembersPageComponent,
-    OrderHistoryComponent,
-    CustomOktaCallbackComponent
+    OrderHistoryComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
