@@ -1,0 +1,14 @@
+{
+    "navigationFallback": {
+      "rewrite": "/index.html",
+      "exclude": ["/api/*"]
+    },
+    "routes": [
+      {
+        "route": "/login/callback",
+        "redirect": "/index.html",
+        "statusCode": 200
+      }
+    ]
+}
+  
