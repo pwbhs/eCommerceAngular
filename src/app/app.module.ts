@@ -32,6 +32,7 @@ import myAppConfig from './config/my-app-config';
 import { MembersPageComponent } from './components/members-page/members-page.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { CustomOktaCallbackComponentComponent } from './custom-okta-callback-component/custom-okta-callback-component.component';
 
 
 const oktaConfig = myAppConfig.oidc;
@@ -80,7 +81,8 @@ const routes: Routes = [
     LoginComponent,
     LoginStatusComponent,
     MembersPageComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    CustomOktaCallbackComponentComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
