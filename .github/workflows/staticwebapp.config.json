@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "build": {
-    "appLocation": "/",
-    "outputLocation": "dist/angular-ecommerce", // 根据你的构建输出路径修改
-    "apiLocation": "", // 如果没有 API，可以留空
-    "nodeVersion": "20.x" // 指定 Node.js 版本
-  }
-}
