@@ -18,6 +18,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { LoginStatusComponent } from './components/login-status/login-status.component';
+import { CustomOktaCallbackComponent } from './custom-okta-callback-component/custom-okta-callback-component.component';
 
 import {
   OktaAuthGuard,
@@ -32,7 +33,7 @@ import myAppConfig from './config/my-app-config';
 import { MembersPageComponent } from './components/members-page/members-page.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
-import { CustomOktaCallbackComponentComponent } from './custom-okta-callback-component/custom-okta-callback-component.component';
+
 
 
 const oktaConfig = myAppConfig.oidc;
@@ -54,7 +55,7 @@ const routes: Routes = [
   {path: 'members', component: MembersPageComponent, canActivate: [OktaAuthGuard],
                     data: {onAuthRequired: sendToLoginPage} },
 
-  {path: 'login/callback', component: OktaCallbackComponent},
+  {path: 'login/callback', component: CustomOktaCallbackComponent},
   {path: 'login', component: LoginComponent},
   
   {path: 'checkout', component: CheckoutComponent},
@@ -82,7 +83,7 @@ const routes: Routes = [
     LoginStatusComponent,
     MembersPageComponent,
     OrderHistoryComponent,
-    CustomOktaCallbackComponentComponent
+    CustomOktaCallbackComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
