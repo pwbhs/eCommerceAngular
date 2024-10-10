@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class OrderHistoryService {
 
-  private orderUrl = `${environment.apiBaseUrl}/orders`;
+  private orderUrl = 'ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api/states/orders';
 
   constructor(private httpClient: HttpClient) { }
 
