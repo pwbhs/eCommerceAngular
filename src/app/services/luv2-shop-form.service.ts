@@ -11,8 +11,8 @@ import { environment } from 'src/environments/environment';
 })
 export class Luv2ShopFormService {
 
-  private countriesUrl = 'ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api/countries';
-  private statesUrl = 'ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api/states';
+  private countriesUrl = `${environment.apiBaseUrl}/countries`;
+  private statesUrl = `${environment.apiBaseUrl}/states`;
 
   constructor(private httpClient: HttpClient) { }
 

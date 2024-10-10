@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CheckoutService {
 
-  private purchaseUrl = 'ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api/checkout/purchase';
+  private purchaseUrl = `${environment.apiBaseUrl}/checkout/purchase`;
 
   constructor(private httpClient: HttpClient) { }
 

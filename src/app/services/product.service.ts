@@ -11,9 +11,9 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductService {
 
-  private baseUrl = 'ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api/states/products';
+  private baseUrl = `${environment.apiBaseUrl}/products`;
 
-  private categoryUrl = `ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api/states/product-category`;
+  private categoryUrl = `${environment.apiBaseUrl}/product-category`;
 
   constructor(private httpClient: HttpClient) { }
 

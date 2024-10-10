@@ -19,7 +19,7 @@ export class AuthInterceptorService implements HttpInterceptor {
   private async handleAccess(request: HttpRequest<any>, next: HttpHandler): Promise<HttpEvent<any>> {
 
     // Only add an access token for secured endpoints
-    const securedEndpoints = ['ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api/orders'];
+    const securedEndpoints = [`${environment.apiBaseUrl}/orders`];
 
     if (securedEndpoints.some(url => request.urlWithParams.includes(url))) {
 
