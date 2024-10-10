@@ -22,6 +22,7 @@ export class LoginStatusComponent implements OnInit {
     // Subscribe to authentication state changes
     this.oktaAuthService.authState$.subscribe(
       (result) => {
+        console.log('Authentication State:', result); // 添加调试信息
         this.isAuthenticated = result.isAuthenticated!;
         this.getUserDetails();
       }
@@ -40,6 +41,9 @@ export class LoginStatusComponent implements OnInit {
 
           // retrieve the user's email from authentication response
           const theEmail = res.email;
+
+          // 调试输出
+          console.log('User Details:', res);
 
           // now store the email in browser storage
           this.storage.setItem('userEmail', JSON.stringify(theEmail));
