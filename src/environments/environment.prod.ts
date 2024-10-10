@@ -6,5 +6,5 @@ export const environment = {
     issuer: 'https://dev-85756127.okta.com/oauth2/default',
     redirectUri: 'https://ambitious-ground-04bd38a0f.5.azurestaticapps.net/login/callback',
     scopes: ['openid', 'profile', 'email']
-}
+  }
 };
