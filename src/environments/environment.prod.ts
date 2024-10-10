@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'myecommerceapp-azdvczaje4dme5hw.canadaeast-01.azurewebsites.net/api'
+  apiBaseUrl: 'ecommercespring-g7guhdcvf2gjgrd6.canadaeast-01.azurewebsites.net/api'
 };
